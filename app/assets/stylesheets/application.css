@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ .display_photo{
+ 	height: 100px;
+ 	width: 100px;
+ }
+
+ .display_photo > img{
+ 	height: 100%;
+ 	width: 100%;
+ }
+
+ #search_results{
+	width: 96%;
+	position: relative;
+	left: 21px;
+	z-index: 20;
+}
+
+#search_results > div{
+ 	border: 1px solid grey;
+ 	border-top: 0px;
+ 	border-top: 0;
+ 	width: 100%;
+ 	background-color: white;
+ 	padding: 5px;
+ 	color: black;
+ 	box-sizing: border-box;
+}
+
+#search_results > div:hover{
+ 	cursor: pointer;
+ 	background-color: cyan;
+}
+.card {
+	width: 100%;
+
+
+}
+
+.add_product
+     	{
+     		display: flex;
+     		justify-content: space-around;
+     		align-items: center;
+     	}
+
+
+     	.store_image{
+     		height: 300px;
+     	}
+
+ 

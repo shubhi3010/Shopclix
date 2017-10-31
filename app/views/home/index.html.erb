@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome!</title>
+</head>
+<body>
+    <div>  
+        <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="clothes.jpg"> <!-- random image -->
+        <div class="caption left-align cyan-text text-darken-4">
+          <h3><b>Stand Out</b></h3>
+          <h5 class="light cyan-text text-darken-4"><b>When you hang out!</b></h5>
+        </div>
+      </li>
+      <li>
+        <img src="electronics-3.png"> <!-- random image -->
+        <div class="caption left-align light grey-text text-lighten-3">
+          <!--add text-->
+        </div>
+      </li>
+      <li>
+        <img src="bookclub.jpg"> <!-- random image -->
+        
+      </li>
+      <li>
+        <img src="furniture-3.jpg"> <!-- random image -->
+        <div class="caption left-align red-text text-accent-3">
+          <h2>Furniture</h2>
+          <h5 class="light red-text text-accent-3 ">Accentuate the look of your home</h5>
+        </div>
+      </li>
+    </ul>
+    </div>
+    </div>
+
+  <div class="container">
+    
+    
+      <h5><b>Electronics Stores </b></h5>
+       <div class="row">
+        <% @electronics.each do |store| %>
+          <%= render 'store', store: store %>
+        <% end %>
+        </div>
+
+        <h5><b>Appliances Stores </b></h5>
+       <div class="row">
+        <% @appliances.each do |store| %>
+          <%= render 'store', store: store %>
+        <% end %>
+        </div>
+            
+  
+    
+      <h5><b>Men Clothing Stores  </b></h5>
+      <div class="row">
+        <% @men.each do |store| %>
+          <%= render 'store', store: store %>
+        <% end %>
+      </div>
+            
+  
+    
+      <h5><b>Women Clothing Stores  </b></h5>
+      <div class="row">
+
+        <% @women.each do |store| %>
+          <%= render 'store', store: store %>
+        <% end %>
+      </div>
+      
+      <h5><b>Kids Stores  </b></h5>
+      <div class="row">
+        <% @kids.each do |store| %>
+          <%= render 'store', store: store %>
+        <% end %>
+      </div>
+
+      <h5><b>Books Stores  </b></h5>
+        <div class="row">
+        <% @books.each do |store| %>
+          <%= render 'store', store: store %>
+        <% end %>
+        </div>
+
+      <h5><b>Furniture Stores  </b></h5>
+      <div class="row">
+        <% @furniture.each do |store| %>
+          <%= render 'store', store: store %>
+        <% end %>
+      </div>
+
+        <h5><b>Others  </b></h5>
+        <div class="row">
+        <% @others.each do |store| %>
+          <%= render 'store', store: store %>
+        <% end %>
+        </div>
+
+  </div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.js"></script> 
+<script type="text/javascript">
+    $('.dropdown-button').dropdown({
+          inDuration: 300,
+          outDuration: 225,
+          constrain_width: false, // Does not change width of dropdown to that of the activator
+          hover: true, // Activate on hover
+          gutter: 0, // Spacing from edge
+          belowOrigin: true, // Displays dropdown below the button
+          alignment: 'left' // Displays dropdown with edge aligned to the left of button
+        }
+      );
+  $('.carousel.carousel-slider').carousel({fullWidth: true, padding:100},setTimeout(autoplay, 3500));
+    function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 3500);
+     }
+     $(document).ready(function(){$('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true // Choose whether you can drag to open on touch screens
+   });
+    });
+     $(document).ready(function(){
+      $('.slider').slider();
+    });
+        
+        
+</script>
+</body>
+</html>
